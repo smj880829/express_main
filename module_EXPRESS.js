@@ -16,6 +16,12 @@ function start(){
     //console.log(req.route);
   })
 
+  app.post('/socket', function (req, res) {
+    res.render('socket_index', {temps: 'Express123123'})
+    //res.sendFile(__dirname + '/Route_Page.html',{ temps: 'Express123123'});
+    //console.log(req.body.flgs);
+  })
+
   app.get('/route', function (req, res) {
     res.sendFile(__dirname + '/Route_Page.html');
     //console.log(req.route);

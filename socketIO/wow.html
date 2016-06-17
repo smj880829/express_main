@@ -1,0 +1,10 @@
+<script src="/workspace/express_main/node_modules/socket.io/node_modules/socket.io-client/socket.io.js"></script>
+<script>
+    var socket = io.connect('http://localhost');    //localhost로 연결
+    socket.on('news', function(data) {    //서버에서 news이벤트가 일어날 때 data를 받음
+        console.log(data);
+        socket.emit('my other event', {my: 'data'});
+    });
+</script>
+
+
