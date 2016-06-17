@@ -16,6 +16,10 @@ function start(){
     //console.log(req.route);
   })
 
+  app.get('/route', function (req, res) {
+    res.sendFile(__dirname + '/Route_Page.html');
+    //console.log(req.route);
+  })
 
   app.listen(3000, function () {
     console.log('EX server start');
