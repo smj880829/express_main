@@ -1,10 +1,8 @@
 <script src="/workspace/express_main/node_modules/socket.io/node_modules/socket.io-client/socket.io.js"></script>
 <script>
-    var socket = io.connect('http://localhost');    //localhost·Î ¿¬°á
-    socket.on('news', function(data) {    //¼­¹ö¿¡¼­ newsÀÌº¥Æ®°¡ ÀÏ¾î³¯ ¶§ data¸¦ ¹ÞÀ½
+    var socket = io.connect('http://localhost');    //localhostï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    socket.on('news', function(data) {    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ newsï¿½Ìºï¿½Æ®ï¿½ï¿½ ï¿½Ï¾î³¯ ï¿½ï¿½ dataï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         console.log(data);
         socket.emit('my other event', {my: 'data'});
     });
 </script>
-
-
